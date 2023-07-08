@@ -43,7 +43,7 @@ app.post('/text-to-speech', (req, res) => {
     console.log(`statusCode: ${response.statusCode}`);
 
     const audioFile = createWriteStream('audio.mp3');
-   
+    response.pipe(audioFile);
     audioFile.on('finish', () => {
       const audRef = ref(storage, `audios/${Math.random()}.mp3`);
       uploadBytes(audRef, fs.readFileSync('audio.mp3')).then((snapshot) => {
