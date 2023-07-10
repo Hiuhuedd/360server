@@ -7,7 +7,7 @@ import { getStorage, ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 
 
 import dotenv from 'dotenv';
-dotenv.config();
+dotenv.config()
 
 
 const firebaseConfig = {
