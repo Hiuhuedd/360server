@@ -33,7 +33,6 @@ app.get('/', (req, res) => {
 });
 
 app.post('/text-to-speech', (req, res) => {
-    const apiKey = process.env.XI_API_KEY; 
   
     const { text, voiceSettings,voiceId } = req.body;
   
@@ -43,7 +42,7 @@ app.post('/text-to-speech', (req, res) => {
       method: 'POST',
       headers: {
         'accept': 'audio/mpeg',
-        'xi-api-key': apiKey,
+        'xi-api-key': process.env.XI_API_KEY,
         'Content-Type': 'application/json'
       }
     };
