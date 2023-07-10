@@ -42,7 +42,7 @@ app.post('/text-to-speech', (req, res) => {
       method: 'POST',
       headers: {
         'accept': 'audio/mpeg',
-        'xi-api-key': process.env.XI_API_KEY,
+        'xi-api-key': '020809f151376cae96d9d73bb1cdd78c',
         'Content-Type': 'application/json'
       }
     };
